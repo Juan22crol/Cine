@@ -4,11 +4,11 @@ import { fetchTopMovies } from '../../store/slices/thunks';
 
 const Cartelera = () => {
 
-  const { peliculas } = useSelector( state => state.topPelis)
+  const { topPelis } = useSelector( state => state.pelis)
   
   const dispatch = useDispatch()
 
-
+  console.log(topPelis)
   useEffect(() => {
     dispatch(fetchTopMovies());
   }, []);
@@ -31,7 +31,7 @@ const Cartelera = () => {
     <div className="container mx-auto">
       <h1 className="text-center text-3xl font-semibold my-4 text-blue-600">Cartelera de este mes</h1>
       <div className="flex justify-center gap-4">
-        {peliculas.map(movie => (
+        {topPelis.map(movie => (
           <div key={movie.id} className="text-center">
             <h2 className="text-lg font-semibold mb-2 text-blue-700">{movie.title}</h2>
             <a href="/comprar">

@@ -11,7 +11,7 @@ export const fetchAllMovies = () => {
             
             const data = await res.json();
             const pelis = data.results.slice(0,10);
-            console.log(pelis)
+            //console.log(pelis)
 
             dispatch(setAllPelis({ pelis: pelis })) //Bien
 
@@ -29,8 +29,8 @@ export const fetchTopMovies = () => {
 
             
             const data = await res.json();
-            const peliculas = data.results.slice(0,3);
-            console.log(peliculas)
+            const pelis = data.results.slice(0,3);
+            console.log(pelis)
 
             dispatch(setTopPelis({ pelis: pelis }))
 

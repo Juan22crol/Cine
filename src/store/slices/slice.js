@@ -9,13 +9,13 @@ export const movies = createSlice({
   },
   reducers: {
     setAllPelis: (state, action) => {
-        console.log(state)
-        console.log(action)
-        state.allPelis = action.payload.allPelis
+        //console.log(state)
+        //console.log(action)
+        state.allPelis = action.payload.pelis
     },
 
     setTopPelis: (state, action) => {
-        state.topPelis = action.payload.topPelis
+        state.topPelis = action.payload.pelis
       },
     
   },
