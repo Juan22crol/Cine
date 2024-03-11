@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import {topMovies} from './slices/Cartelera/topMovies'
+import { movies} from './slices/slice'
 
 export const store = configureStore({
   reducer: {
-    topPelis: topMovies.reducer
+
+    pelis: movies.reducer
   },
 })
